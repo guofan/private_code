@@ -216,10 +216,10 @@
         <div class="content">
 
             <div class="nav-container">
-                <div class="nav">
+                <div class="nav" onClick="chooseHouseType('120');" >
                     <span>120平米摇号</span>
                 </div>
-                <div class="nav">
+                <div class="nav" onClick="chooseHouseType('90');">
                     <span>90平米摇号</span>
                 </div>
                 <div class="nav">
@@ -260,7 +260,9 @@
     <script src="./static/jquery-1.12.0.min.js"></script>
     <script src="./static/jquery.cookie.js"></script>
     <script src="./static/house.js"></script>
-
+    <script type="text/javascript">
+    	initdata();
+    </script>
 
 </body>
 </html>

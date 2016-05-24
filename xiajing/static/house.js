@@ -2,19 +2,12 @@
         var house_list_90;
         var house_result_list_120;
         var house_result_list_90;
-        var type;
+        var type='90';
         var mytime=null;
         var begin_num = 1;
         var random_num = 0;
         var index = 0;
-
-        var resultlist = eval("house_result_list_"+type);
-        if(resultlist.length != 0){
-            $.each(resultlist,function(index, result){
-                var createResult = $("<p></p>").css("margin-top","20px").text(index+":"+result);
-                $("#result").prepend(createResult);
-            });
-        }
+        
         function initdata(){
             $.ajax({type:"get",dataType:"json",url:"initdata",success:function(msg){
                     house_list_120 = msg["house_list_120"]
@@ -24,15 +17,23 @@
                 }
             });
         }
+        function chooseHouseType(housetype){
+            type = housetype;
+            console.log(type);
+        }
         function doit(){
             var bt=window.document.getElementById("bt");
 
             if(mytime==null){
                 index = $("#order-number").val();;
-                console.log(index);
+                if(index == "") {
+		    alert("请填写序号");
+ 		    return;
+		}
                 bt.innerHTML="停止抽房";
                 startshow();
-                random_num = $.ajax({url:"/random?"+type, async:true});
+                var random_url = "/random?type="+type+"&index="+index;
+                random_num = $.ajax({url:random_url, async:true});
                 console.log(random_num)
             }else{
                 bt.innerHTML="开始抽房";

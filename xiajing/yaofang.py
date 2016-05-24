@@ -72,6 +72,8 @@ class indexHandler(tornado.web.RequestHandler):
 
 class randomHandler(tornado.web.RequestHandler):
     def get(self):
+        house_type = self.get_argument('type')
+        index = self.get_argument('index')
         self.write(str(random.random()*100%7))
 
 application = tornado.web.Application([

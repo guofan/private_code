@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新武东小区二期还建房摇号系统</title>
+    <style type="text/css">
+
+        body{
+
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+        .container{
+
+            width: 100%;
+
+            height: 800px;
+
+            position: relative;
+
+            background: #D92215;
+
+
+        }
+
+        .content{
+
+            width: 1000px;
+
+            height: 700px;
+
+            background: url("./static/image.jpg") no-repeat center;
+
+            position: absolute;
+
+            top: 40%;
+
+            left: 50%;
+
+            margin-left: -500px;
+
+            margin-top: -350px;
+
+            display: block;
+
+            border-radius: 5px;
+
+            border: 2px solid #CD7F32;
+
+        }
+
+        .box{
+
+            width: 520px;
+
+            height: 90px;
+
+            text-align: center;
+
+            font-size: 66px;
+
+            line-height: 94px;
+
+            position: absolute;
+
+            color: #ff0000;
+
+            margin-top: 305px;
+
+            margin-left: 220px;
+
+        }
+
+        .choose{
+
+            position: absolute;
+
+            width: 426px;
+
+            height: 66px;
+
+            font-size: 35px;
+
+            line-height: 66px;
+
+            border-radius: 15px;
+
+            margin-top: 586px;
+
+            margin-left: 276px;
+
+            text-align: center;
+
+            color: #D92215;
+
+            cursor: pointer;
+
+        }
+
+        .result{
+
+            position: absolute;
+
+            width: 200px;
+
+            height: 380px;
+
+            border-radius: 5px;
+
+            margin-top: 166px;
+
+            margin-left: 785px;
+
+            line-height: 3px;
+
+            font-size: 35px;
+
+            color: #CD7F32;
+
+            border: 2px solid #CD7F32;
+
+            overflow-x: hidden;
+
+            overflow-y: auto;
+
+        }
+
+        .series-container{
+
+            position: absolute;
+
+            margin-top: 220px;
+
+            margin-left: 340px;
+
+            color: #ff0000;
+
+            height: 60px;
+
+            line-height: 60px;
+
+            font-size: 36px
+
+        }
+
+        .series{
+
+            width: 100px;
+
+            height: 60px;
+
+            line-height: 60px;
+
+            outline: none;
+
+            padding-left: 10px;
+
+            font-size: 36px;
+
+            color: #ff0000;
+
+            border:2px solid #ff0000;
+
+        }
+
+        .nav-container{
+
+            position: absolute;
+
+            margin: 30px auto 0 80px;
+
+        }
+
+    
+        .nav{
+
+            width: 120px;
+
+            height: 40px;
+
+            line-height: 40px;
+
+            color: #CD7F32;
+
+            display: inline-block;
+
+            border: 1px solid #CD7F32;
+
+            font-size: 20px;
+
+            text-align: center;
+
+            margin-left: 30px;
+
+            cursor: pointer;
+
+        }
+
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="content">
+
+            <div class="nav-container">
+                <div class="nav">
+                    <span>120平米摇号</span>
+                </div>
+                <div class="nav">
+                    <span>90平米摇号</span>
+                </div>
+                <div class="nav">
+                    <span>打印120平米</span>
+                </div>
+                <div class="nav">
+                    <span>打印90平米</span>
+                </div>
+                <div class="nav">
+                    <span>注销</span>
+                </div>
+            </div>
+
+
+            <div class="series-container">
+                <label for="order-number">序号：</label>
+                <input type = "text" id="order-number" class="series" maxlength="4">
+            </div>
+
+            <div class="box" id="box">
+                <span>马上开始</span>
+            </div>
+
+            <div class="choose" id="bt" onclick="doit();">
+
+                <span>开始摇房</span>
+
+            </div>
+
+            <div class="result" id="result">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./static/jquery-1.12.0.min.js"></script>
+    <script src="./static/jquery.cookie.js"></script>
+    <script src="./static/house.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新武东小区二期还建房摇号系统</title>
+    <style type="text/css">
+
+        body{
+
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+
+            padding: 0;
+
+            margin: 0;
+
+            background: #D92215;
+
+        }
+
+        .container{
+
+            width: 100%;
+
+            height: 100%;
+
+            position: absolute;
+
+            background: #D92215;
+
+
+        }
+
+        .content{
+
+            width: 1000px;
+
+            height: 700px;
+
+            background: url("./static/image.jpg") no-repeat center;
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            margin-left: -500px;
+
+            margin-top: -350px;
+
+            display: block;
+
+            border-radius: 5px;
+
+            border: 2px solid #CD7F32;
+
+        }
+
+        .box{
+
+            width: 520px;
+
+            height: 90px;
+
+            text-align: center;
+
+            font-size: 36px;
+
+            line-height: 44px;
+
+            position: absolute;
+
+            color: #ff0000;
+
+            margin-top: 305px;
+
+            margin-left: 220px;
+
+        }
+
+        .choose{
+
+            position: absolute;
+
+            width: 426px;
+
+            height: 66px;
+
+            font-size: 35px;
+
+            line-height: 66px;
+
+            border-radius: 15px;
+
+            margin-top: 586px;
+
+            margin-left: 276px;
+
+            text-align: center;
+
+            color: #D92215;
+
+            cursor: pointer;
+
+        }
+
+        .result{
+
+            position: absolute;
+
+            display: none;
+
+            width: 200px;
+
+            height: 380px;
+
+            border-radius: 5px;
+
+            margin-top: 166px;
+
+            margin-left: 785px;
+
+            line-height: 380px;
+
+            font-size: 46px;
+
+            color: #D92215;
+
+            border: 2px solid #CD7F32;
+
+            overflow-x: hidden;
+
+            overflow-y: auto;
+
+        }
+
+        .sign{
+
+            position: absolute;
+
+            width: 430px;
+
+            height: 68px;
+
+            background:transparent;
+
+            border-radius: 15px;
+
+            margin-top: 200px;
+
+            margin-left: -315px;
+
+            line-height: 68px;
+
+            font-size: 36px;
+
+            color: #D92215;
+
+            border: 2px solid transparent;
+
+            overflow-x: hidden;
+
+            overflow-y: auto;
+
+            cursor: pointer;
+
+        }
+
+
+    </style>
+
+
+    <script src="./static/jquery-1.12.0.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="content">
+            <form action='/login.html' method = 'post' class = 'box'>
+                <label>用户名:</label>
+                <input type='text' name='username'/>
+                <p>
+                <label>密码:</label>
+                <input type='password' name='password'/>
+                <button class='sign' type="submit">登录</button>
+                {% raw xsrf_form_html() %}
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -21,6 +21,7 @@ house_list_90=[]
 house_list_120=[]
 house_result_list_90={}
 house_result_list_120={}
+house_area_info = {}
 house_reserved_120 = {}
 house_reserved_90 = {}
 
@@ -29,6 +30,13 @@ settings = {
     "xsrf_cookies": True,
 }
 
+def writeResult(house_type):
+    result_list = eval("house_result_list_"+house_type)
+    fp = open("./data/"+house_type+"_result.txt","w")
+    for key in result_list.keys():
+        value = result_list[key]
+        fp.write("%d\t%s\n"%(key,value))
+    fp.close()
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
@@ -87,6 +95,7 @@ class randomHandler(tornado.web.RequestHandler):
             random_num = house_list.index(house)
             house_list.remove(house)
             house_result_list[index]=house
+            writeResult(house_type)
             return random_num
         random_num = int(random.random()*100%len(house_list))
         if house_list[random_num] in house_reserved.values():
@@ -94,6 +103,7 @@ class randomHandler(tornado.web.RequestHandler):
         house = house_list[random_num]
         house_list.remove(house)
         house_result_list[index]=house
+        writeResult(house_type)
         return random_num
         
 
@@ -103,27 +113,42 @@ class randomHandler(tornado.web.RequestHandler):
         self.write(str(self.get_house(house_type, int(index))))
 
 def load_data():
-    fp = open("./data/120.txt")
-    lines = fp.readlines()
-    for line in lines:
-        house_list_120.append(line.split(" ")[0])
-    fp.close()
-    fp = open("./data/90.txt")
-    lines = fp.readlines()
-    for line in lines:
-        house_list_90.append(line.split(" ")[0])
-    fp.close()
+    gethouselist = []
     fp = open("./data/120_result.txt")
     lines = fp.readlines()
     for line in lines:
         token = line.strip().split("\t")
         house_result_list_120[int(token[0])] = token[1]
+        gethouselist.append(token[1])
     fp.close()
     fp = open("./data/90_result.txt")
     lines = fp.readlines()
     for line in lines:
         token = line.strip().split("\t")
         house_result_list_90[int(token[0])] = token[1]
+        gethouselist.append(token[1])
+    fp.close()
+    fp = open("./data/120.txt")
+    lines = fp.readlines()
+    for line in lines:
+        token = line.split(" ")
+        house = token[0]
+        area = token[1]
+        house_area_info[house]=area
+        if house in gethouselist:
+            continue
+        house_list_120.append(house)
+    fp.close()
+    fp = open("./data/90.txt")
+    lines = fp.readlines()
+    for line in lines:
+        token = line.split(" ")
+        house = token[0]
+        area = token[1]
+        house_area_info[house]=area
+        if house in gethouselist:
+            continue
+        house_list_90.append(house)
     fp.close()
 
     fp = open("./data/120_reserved.txt")

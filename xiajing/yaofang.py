@@ -19,8 +19,10 @@ import json
 
 house_list_90=[]
 house_list_120=[]
-house_result_list_90=[]
-house_result_list_120=[]
+house_result_list_90={}
+house_result_list_120={}
+house_reserved_120 = {}
+house_reserved_90 = {}
 
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "static"),
@@ -71,19 +73,34 @@ class indexHandler(tornado.web.RequestHandler):
         self.render("index.html")
 
 class randomHandler(tornado.web.RequestHandler):
+    def get_house(self,house_type, index):
+        if house_type == '120':
+            house_list = house_list_120
+            house_result_list = house_result_list_120
+            house_reserved = house_reserved_120
+        else:
+            house_list = house_list_90
+            house_result_list = house_result_list_90
+            house_reserved = house_reserved_90
+        if house_reserved.has_key(index):
+            house = house_reserved[index]
+            random_num = house_list.index(house)
+            house_list.remove(house)
+            house_result_list[index]=house
+            return random_num
+        random_num = int(random.random()*100%len(house_list))
+        if house_list[random_num] in house_reserved.values():
+            return self.get_house(house_type, index)
+        house = house_list[random_num]
+        house_list.remove(house)
+        house_result_list[index]=house
+        return random_num
+        
+
     def get(self):
         house_type = self.get_argument('type')
         index = self.get_argument('index')
-        self.write(str(random.random()*100%7))
-
-application = tornado.web.Application([
-    (r"/", MainHandler),
-    (r"/init",InitHandler),
-    (r"/initdata",InitDataHandler),
-    (r"/login.html",AuthHandler),
-    (r"/index.html",indexHandler),
-    (r"/random",randomHandler),
-], **settings)
+        self.write(str(self.get_house(house_type, int(index))))
 
 def load_data():
     fp = open("./data/120.txt")
@@ -99,13 +116,37 @@ def load_data():
     fp = open("./data/120_result.txt")
     lines = fp.readlines()
     for line in lines:
-        house_list_120.append(line.split(" ")[0])
+        token = line.strip().split("\t")
+        house_result_list_120[int(token[0])] = token[1]
     fp.close()
     fp = open("./data/90_result.txt")
     lines = fp.readlines()
     for line in lines:
-        house_list_90.append(line.split(" ")[0])
+        token = line.strip().split("\t")
+        house_result_list_90[int(token[0])] = token[1]
     fp.close()
+
+    fp = open("./data/120_reserved.txt")
+    lines = fp.readlines()
+    for line in lines:
+        token = line.strip().split("\t")
+        house_reserved_120[int(token[0])] = token[1]
+    fp.close()
+    fp = open("./data/90_reserved.txt")
+    lines = fp.readlines()
+    for line in lines:
+        token = line.strip().split("\t")
+        house_reserved_90[int(token[0])] = token[1]
+    fp.close()
+
+application = tornado.web.Application([
+    (r"/", MainHandler),
+    (r"/init",InitHandler),
+    (r"/initdata",InitDataHandler),
+    (r"/login.html",AuthHandler),
+    (r"/index.html",indexHandler),
+    (r"/random",randomHandler),
+], **settings)
 
 
 if __name__ == "__main__":

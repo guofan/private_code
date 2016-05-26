@@ -33,7 +33,10 @@
                 bt.innerHTML="停止抽房";
                 startshow();
                 var random_url = "/random?type="+type+"&index="+index;
-                random_num = $.ajax({url:random_url, async:true});
+                $.ajax({url:random_url, async:false, success:function(msg){
+                    console.log(msg);
+		    random_num = parseInt(msg);
+		}});
                 console.log(random_num)
             }else{
                 bt.innerHTML="开始抽房";
@@ -55,10 +58,10 @@
             }
             $("#order-number").val("");
             var box=window.document.getElementById("box");
-            var num=parseInt(random_num.responseText);
+            var num=random_num;
             var result = namelist[num];
             namelist.splice(num, 1);
-            resultlist.push(result);
+            resultlist[index] = result;
 
             box.innerHTML=result;
             var createResult = $("<p></p>").css("margin-top","20px").text(index+":"+result);

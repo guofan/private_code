@@ -80,6 +80,18 @@ class indexHandler(tornado.web.RequestHandler):
             self.redirect("/login.html")
         self.render("index.html")
 
+class printHandler(tornado.web.RequestHandler):
+    def get(self):
+        name = self.get_cookie("user_name")
+        if name != "admin":
+            self.redirect("/login.html")
+        house_info = self.get_argument('house_info')
+        if house_info not in house_area_info:
+            self.write("cannot find house:%s"%(house_info))
+        else:
+            area_info = house_area_info[house_info]
+            self.render("print.html",area_info=area_info, house_info=house_info)
+
 class randomHandler(tornado.web.RequestHandler):
     def get_house(self,house_type, index):
         if house_type == '120':
@@ -171,6 +183,7 @@ application = tornado.web.Application([
     (r"/login.html",AuthHandler),
     (r"/index.html",indexHandler),
     (r"/random",randomHandler),
+    (r"/print",printHandler),
 ], **settings)
 
 

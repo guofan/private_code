@@ -75,6 +75,28 @@
             margin-left: 220px;
 
         }
+        .printbt{
+
+            cursor: pointer;
+            width: 520px;
+
+            height: 90px;
+
+            text-align: center;
+
+            font-size: 35px;
+
+            line-height: 94px;
+
+            position: absolute;
+
+            color: #ff0000;
+
+            margin-top: 420px;
+
+            margin-left: 220px;
+
+        }
 
         .choose{
 
@@ -217,7 +239,7 @@
 
             font-size: 16px;
 
-            color: #CD7F32;
+            color: green;
 
             border: 2px solid #CD7F32;
 
@@ -331,9 +353,13 @@
                 <span>马上开始</span>
             </div>
 
+            <div class="printbt" id="printbt">
+                <span>打印</span>
+            </div>
+
             <div class="choose" id="bt" onclick="doit();">
 
-                <span>开始摇房</span>
+                <span>开始选房</span>
 
             </div>
 
@@ -343,13 +369,13 @@
 
             <div class="house-number">
             	<div class="house-sold">
-            		<span>已经摇过房间总数：</span>
+            		<span>已摇房屋数：</span>
             	</div>
             	<div class="house-sold-num">
             		<span id="house-number-sold">3</span>
             	</div>
             	<div class="house-remain">
-            		<span>还剩房间总数：</span>
+            		<span>剩余房屋数：</span>
             	</div>
             	<div class="house-remain-num">
             		<span id="house-number-remain">4</span>

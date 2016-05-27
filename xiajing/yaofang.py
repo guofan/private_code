@@ -97,7 +97,7 @@ class randomHandler(tornado.web.RequestHandler):
             house_result_list[index]=house
             writeResult(house_type)
             return random_num
-        random_num = int(random.random()*100%len(house_list))
+        random_num = int(random.random()*1000%len(house_list))
         if house_list[random_num] in house_reserved.values():
             return self.get_house(house_type, index)
         house = house_list[random_num]

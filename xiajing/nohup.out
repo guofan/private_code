@@ -1,0 +1,206 @@
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.40ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.46ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (213.246.45.128) 0.45ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.47ms
+ERROR:tornado.application:Uncaught exception GET /index.html (101.226.64.174)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='101.226.64.174', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '182.61.14.138:9999', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'Close', 'Referer': 'http://182.61.14.138:9999'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.38ms
+WARNING:tornado.access:404 GET http://www.qunar.com/ (123.59.59.52) 0.47ms
+ERROR:tornado.application:Uncaught exception GET /index.html (101.226.68.215)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='101.226.68.215', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '182.61.14.138:9999', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'Close', 'Referer': 'http://182.61.14.138:9999'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.44ms
+ERROR:tornado.application:Uncaught exception GET /index.html (58.48.149.192)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='58.48.149.192', headers={'Accept-Language': 'zh-CN', 'Accept-Encoding': 'gzip, deflate', 'Host': '182.61.14.138:9999', 'Accept': '*/*', 'User-Agent': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; InfoPath.3; Shuame)', 'Dnt': '1', 'Connection': 'Keep-Alive'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+ERROR:tornado.application:Uncaught exception GET /index.html (106.120.160.109)
+HTTPServerRequest(protocol='http', host='182.61.14.138', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='106.120.160.109', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'identity', 'Host': '182.61.14.138', 'User-Agent': 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)', 'Connection': 'close', 'Referer': 'http://182.61.14.138:9999/index.html'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+ERROR:tornado.application:Uncaught exception GET /index.html (101.199.108.53)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='101.199.108.53', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate', 'Host': '182.61.14.138:9999', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.3 (KHTML, like Gecko) Version/8.0 Mobile/12A4345d Safari/600.1.4', 'Accept-Charset': 'iso-8859-1,*,utf-8', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.41ms
+ERROR:tornado.application:Uncaught exception GET /index.html (119.147.207.158)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='119.147.207.158', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '182.61.14.138:9999', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'Close', 'Referer': 'http://182.61.14.138:9999'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+ERROR:tornado.application:Uncaught exception GET /index.html (14.17.34.182)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='14.17.34.182', headers={'Accept-Language': 'zh-cn, zh', 'Host': '182.61.14.138:9999', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; GT-I9500 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.0 QQ-URL-Manager Mobile Safari/537.36', 'Accept-Charset': 'GB2312,utf-8;q=0.7,*;q=0.7', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.42ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (213.246.45.128) 0.43ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.45ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.57ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (172.82.166.210) 0.49ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.51ms
+WARNING:tornado.access:404 GET /manager/html (61.161.130.242) 0.39ms
+WARNING:tornado.access:404 GET /manager/html (60.217.228.42) 0.51ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.46ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (213.246.45.128) 0.63ms
+WARNING:tornado.access:404 GET http://119.90.40.16:8090/ (61.160.195.222) 0.42ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.45ms
+ERROR:tornado.application:Uncaught exception GET /index.html (112.90.82.196)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='112.90.82.196', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '182.61.14.138:9999', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'Close', 'Referer': 'http://182.61.14.138:9999'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+ERROR:tornado.application:Uncaught exception GET /index.html (219.139.227.12)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='219.139.227.12', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '182.61.14.138:9999', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'Connection': 'keep-alive', 'If-None-Match': '"1c3298ab80a5f06e141cac809469d2e1c2a645b2"', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+WARNING:tornado.access:404 GET /favicon.ico (219.139.227.12) 1.95ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (213.246.45.128) 0.44ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.41ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (172.82.166.210) 0.68ms
+WARNING:tornado.access:404 GET http://www.baidu.com/cache/global/img/gs.gif (80.82.78.38) 0.43ms
+ERROR:tornado.application:Uncaught exception GET /index.html (59.172.13.243)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='59.172.13.243', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '182.61.14.138:9999', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36', 'Connection': 'keep-alive', 'If-None-Match': '"188fb1212ba4aa648613fc7aa04b2246df14cad5"', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+WARNING:tornado.access:404 GET /favicon.ico (59.172.13.243) 1.74ms
+ERROR:tornado.application:Uncaught exception GET /index.html (113.108.21.69)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='113.108.21.69', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '182.61.14.138:9999', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'Close', 'Referer': 'http://182.61.14.138:9999'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+ERROR:tornado.application:Uncaught exception GET /index.html (59.172.13.243)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/index.html', version='HTTP/1.1', remote_ip='59.172.13.243', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '182.61.14.138:9999', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36', 'Connection': 'keep-alive', 'If-None-Match': '"1c3298ab80a5f06e141cac809469d2e1c2a645b2"', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 81, in get
+    self.render("index.html")
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 699, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 804, in render_string
+    namespace = self.get_template_namespace()
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 828, in get_template_namespace
+    namespace.update(self.ui)
+TypeError: 'NoneType' object is not iterable
+WARNING:tornado.access:404 GET /favicon.ico (59.172.13.243) 1.77ms
+ERROR:tornado.application:Uncaught exception GET /random?type=120&index=132 (59.172.13.243)
+HTTPServerRequest(protocol='http', host='182.61.14.138:9999', method='GET', uri='/random?type=120&index=132', version='HTTP/1.1', remote_ip='59.172.13.243', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '182.61.14.138:9999', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://182.61.14.138:9999/index.html', 'X-Requested-With': 'XMLHttpRequest'})
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "yaofang.py", line 125, in get
+    self.write(str(self.get_house(house_type, int(index))))
+  File "yaofang.py", line 112, in get_house
+    random_num = int(random.random()*1000%len(house_list))
+ZeroDivisionError: float modulo
+ERROR:tornado.access:500 GET /random?type=120&index=132 (59.172.13.243) 3.27ms
